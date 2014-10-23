@@ -1,0 +1,196 @@
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: #e74c3c;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #f2f2f2;
+}
+::-webkit-selection {
+    color: #e74c3c;
+    background: #ffffff;
+}
+::-moz-selection {
+    color: #e74c3c;
+    background: #ffffff;
+}
+::selection {
+    color: #e74c3c;
+    background: #ffffff;
+}
+.box-sizing {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,body{
+    position:relative;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: #e74c3c;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    text-rendering: auto;
+}
+h3, p {
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+h3 {
+    font-weight: 700;
+}
+.window {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #ffffff;
+    border-width: 2px;
+    border-color: #FFFFFF;
+    border-style: solid;
+    display: block;
+    height: 100%;
+}
+.window .window-drag {
+    height: 3em;
+    width: 51em;
+    -webkit-app-region: drag;
+}
+.window .window-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 36px;
+    z-index: 99999;
+    -webkit-app-region: no-drag;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.window .window-buttons #minimize, .window .window-buttons #maximize, .window .window-buttons #close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 1em;
+    height: 1em;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 100%;
+}
+.window .window-buttons #minimize {
+    right: 4em;
+    background: #16A085;
+    color: #16A085;
+}
+.window .window-buttons #maximize {
+    right: 2.5em;
+    background: #D35400;
+    color: #D35400;
+}
+.window .window-buttons #close {
+    right: 1em;
+    background: #C0392B;
+    color: #C0392B;
+}
+.window .widget {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width: 480px) {
+    .window .window-body {
+        width: 100%;
+    }
+}
+table {
+    -webkit-app-region: no-drag;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 20px auto;
+    background: #e74c3c;
+    color: #ffffff;
+    text-align: center;
+    width: 98%;
+    height:75%;
+}
+table tr {
+    margin-right: 4px;
+}
+table tr td {
+    width: calc(12.5%);
+    border: none;
+    border: 1px solid #ffffff;
+    padding: 0;
+    margin: 0;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+table tr td:first-child {
+    text-align: center;
+    border: none;
+    background: #ffffff;
+    color: #e74c3c;
+    border-bottom: 1px solid #ffffff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+table tr td:last-child {
+    border-right: 1px solid #ffffff;
+}
+table tr td textarea {
+    display: block;
+    background: #e74c3c;
+    color: #ffffff;
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 0.2em;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+table tr td textarea:focus {
+    background: #d62c1a;
+}
+table tr:first-child {
+    height: 2em;
+    background: #ffffff;
+    color: #e74c3c;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.isNow {
+    border-left: 1px solid #c0392b !important;
+    border-right: 1px solid #c0392b !important;
+    background: #c0392b !important;
+    color: #ffffff !important;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}

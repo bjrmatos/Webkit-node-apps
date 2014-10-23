@@ -1,0 +1,27 @@
+{
+  "name": "Markdown editor",
+  "description": "Markdown editor.",
+  "version": "0.1",
+  "main": "index.html",
+  "dom_storage_quota": 524288, 
+  "js-flags": "--harmony",
+  "single-instance": true,
+  "chromium-args" : "--disable-threaded-compositing --enable-smooth-scrolling --disable-accelerated-video --enable-webgl --enable-webaudio --ignore-gpu-blacklist --force-compositing-mode --remote-debugging-port=10138 --harmony --enable-devtools-experiments --enable-experimental-web-platform-features --enable-experimental-webkit-features",
+  "keywords": [ "markdown", "node-webkit" ],  // (array) an Array of string keywords to assist users searching for the package in catalogs.
+  "maintainers": [{                       // (array) an Array of maintainers of the package. Each maintainer is a hash which must have a "name" property and may optionally provide "email" and "web" properties.
+    "name": "Moncho Varela",
+    "email": "nakome@gmail.com",
+    "web": "http://nakome.com"
+  }],
+  "window": {
+    "position": "center", 
+    "icon": "./icons/ico.png", 
+    "toolbar": false,
+    "frame": false,
+    "width":845,
+    "height":575,
+    "max-width":845,
+    "max-height":575,
+    "resizable": false  
+  }
+}
