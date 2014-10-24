@@ -9,5 +9,5 @@ If you use
 In data/settings.json you can traslate app.
 
 
-[MrK](http://codepen.io/nakome/pen/Hnisk)
+[MrK Web demo codepen](http://codepen.io/nakome/pen/Hnisk)
 
