@@ -12,5 +12,5 @@ Weekly Calendar  with localStorage simple.
 
 
 
-[Weekly Calendar](http://codepen.io/nakome/pen/svlih)
+[Weekly Calendar web demo](http://codepen.io/nakome/pen/svlih)
 
