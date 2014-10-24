@@ -2,25 +2,25 @@
     width: 5px;
 }
 ::-webkit-scrollbar-track {
-    background-color: #e74c3c;
+    background-color: #fff;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #ffffff;
+    background-color: #eee;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #f2f2f2;
+    background-color: #ddd;
 }
 ::-webkit-selection {
-    color: #e74c3c;
-    background: #ffffff;
+    color: #FFFFFF;
+    background: #eee;
 }
 ::-moz-selection {
-    color: #e74c3c;
-    background: #ffffff;
+    color: #fff;
+    background: #eee;
 }
 ::selection {
-    color: #e74c3c;
-    background: #ffffff;
+    color: #fff;
+    background: #eee;
 }
 .box-sizing {
     -moz-box-sizing: border-box;
@@ -111,6 +111,7 @@ h3 {
     position: relative;
     width: 100%;
     height: 100%;
+    overflow-y: auto;
 }
 @media (max-width: 480px) {
     .window .window-body {
@@ -209,28 +210,14 @@ body {
     color: #333333;
 }
 #page {
-    display: block;
+    height: auto;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-}
-#page .wrapper {
-    display: block;
-    margin: 0;
+    margin: 0 auto;
+    overflow-y: auto;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    display: block;
 }
-#page .wrapper .wrapper_inner {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2.5em;
-    width: 100%;
-    height: 100%;
-}
-.menu {
+#page .wrapper {} #page .wrapper .wrapper_inner {} .menu {
     position: fixed;
     top: 45px;
     right: 0;
@@ -306,7 +293,7 @@ body {
 }
 @media only screen and (min-width: 320px) {
     .modal-overlay .modal-content {
-        width: 100%;
+        width: 90%;
         -webkit-transition: width 0.5s ease;
         -moz-transition: width 0.5s ease;
         transition: width 0.5s ease;
@@ -314,7 +301,7 @@ body {
 }
 @media only screen and (min-width: 480px) {
     .modal-overlay .modal-content {
-        width: 100%;
+        width: 95%;
         -webkit-transition: width 0.5s ease;
         -moz-transition: width 0.5s ease;
         transition: width 0.5s ease;
@@ -353,22 +340,22 @@ body {
     padding: 0.5em 1em;
 }
 .modal-overlay .modal-content .modal-body {
-    padding: 0.5em;
+    padding: 0;
 }
 .modal-overlay .modal-content .modal-body #dbForm label {
     display: block;
-    margin: 0;
+    margin: 5px auto;
     padding: 0;
-    color: #333333;
+    color: #A0A0A0;
 }
 .modal-overlay .modal-content .modal-body #dbForm input, .modal-overlay .modal-content .modal-body #dbForm textarea {
     display: block;
-    width: 100%;
+    width: 95%;
     margin: 0.5em auto;
     padding: 0.5em 1em;
-    background: #e6e6e6;
-    border: 1px solid #b3b3b3;
-    color: #333333;
+    background: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    color: #555;
 }
 .modal-overlay .modal-content .modal-footer {
     display: block;
@@ -401,17 +388,10 @@ body {
 }
 #dbSection {
     display: block;
-    margin: 2% auto;
     padding: 0;
-    padding-top: 1%;
-    padding-left: 1%;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
 }
 @media only screen and (min-width: 240px) {
     #dbSection {
-        width: 90%;
         -webkit-transition: width 0.5s ease;
         -moz-transition: width 0.5s ease;
         transition: width 0.5s ease;
@@ -419,7 +399,6 @@ body {
 }
 @media only screen and (min-width: 320px) {
     #dbSection {
-        width: 90%;
         -webkit-transition: width 0.5s ease;
         -moz-transition: width 0.5s ease;
         transition: width 0.5s ease;
@@ -427,7 +406,6 @@ body {
 }
 @media only screen and (min-width: 480px) {
     #dbSection {
-        width: 95%;
         -webkit-transition: width 0.5s ease;
         -moz-transition: width 0.5s ease;
         transition: width 0.5s ease;
@@ -435,7 +413,6 @@ body {
 }
 @media only screen and (min-width: 768px) {
     #dbSection {
-        width: 100%;
         -webkit-transition: width 0.5s ease;
         -moz-transition: width 0.5s ease;
         transition: width 0.5s ease;
@@ -451,7 +428,7 @@ body {
 }
 @media only screen and (min-width: 1200px) {
     #dbSection {
-        width: 90%;
+        width: 100%;
         -webkit-transition: width 0.5s ease;
         -moz-transition: width 0.5s ease;
         transition: width 0.5s ease;
@@ -460,54 +437,57 @@ body {
 #dbSection h3 {
     color: #3498db;
 }
-#dbSection #dbEvents {
-    margin: 0;
-    padding: 0;
+#dbSection #dbEvents {} .grid {
+    overflow: auto;
+    padding: 0.5em 0 0 0.2em;
+    max-width: 80em;
+    margin: 0 auto;
     list-style: none;
 }
-#dbSection #dbEvents li {
-    display: inline-block;
-    float: left;
-    padding: 0;
-    margin: 0;
-    margin-right: 1%;
-    margin-bottom: 1%;
+.grid{
+    height:40em;
+}
+.grid li {
+    padding: 0 0.5em 0.5em 0;
     position: relative;
+}
+.grid li > div {
     background: #FFFFFF;
-    border: 1px solid #EEEEEE;
-    padding: 0.5em;
+    padding: 2em 0.5em;
 }
-@media only screen and (min-width: 240px) {
-    #dbSection #dbEvents li {
-        width: 100%;
-        -webkit-transition: width 0.5s ease;
-        -moz-transition: width 0.5s ease;
-        transition: width 0.5s ease;
+.grid li a {
+    color: #fff;
+}
+@media all and (min-width: 27em) {
+    .grid li {
+        width: 48%;
+        float: left;
+        position: relative;
+    }
+    .grid{
+        height:30em;
     }
 }
-@media only screen and (min-width: 320px) {
-    #dbSection #dbEvents li {
-        width: 100%;
+@media all and (min-width: 40em) {
+    .grid{
+        height:30em;
     }
-}
-@media only screen and (min-width: 480px) {
-    #dbSection #dbEvents li {
-        width: 100%;
-    }
-}
-@media only screen and (min-width: 768px) {
-    #dbSection #dbEvents li {
-        width: 49%;
-    }
-}
-@media only screen and (min-width: 1024px) {
-    #dbSection #dbEvents li {
+    .grid li {
         width: 32%;
     }
+    .grid li.wide {
+        width: 66.666666%;
+    }
 }
-@media only screen and (min-width: 1200px) {
-    #dbSection #dbEvents li {
+@media all and (min-width: 60em) {
+    .grid{
+        height: 40em;
+    }
+    .grid li {
         width: 32%;
+    }
+    .grid li.wide {
+        width: 50%;
     }
 }
 #dbSection #dbEvents li .eventDel {
@@ -547,9 +527,8 @@ body {
     float: right;
 }
 #dbSection #dbEvents li .eventDesc {
-    padding: 0.5em 0.2em;
     border-bottom: 1px solid #F0F0F0;
-    color: #333333;
+    color: #686262;
 }
 #dbJson {
     display: none;

@@ -30,25 +30,17 @@
                         </div>
                     </div>
 
-                    <div class="wrapper">
-                        <!-- content -->
-                        <div class="wrapper_inner">
+                    <nav class="menu">
+                        <button class="btn" type="button" id="modal_open">${modal_title}</button>
+                    </nav>
 
-                            <nav class="menu">
-                                <button class="btn" type="button" id="modal_open">${modal_title}</button>
-                            </nav>
-
-                            <!-- database section -->
-                            <section id="dbSection">
-                                <h3>${dbSection_title}</h3>
-                                <p>${dbSection_description}</p>
-                                <ul id="dbEvents"></ul>
-                                <pre id="dbJson"></pre>
-                            </section>
-
-                        </div>
-                    </div>
-
+                    <!-- database section -->
+                    <section id="dbSection">
+                        <h3>${dbSection_title}</h3>
+                        <p>${dbSection_description}</p>
+                        <ul id="dbEvents" class="grid"></ul>
+                        <pre id="dbJson"></pre>
+                    </section>
 
 
                     <!-- modal -->

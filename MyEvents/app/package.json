@@ -18,8 +18,8 @@
     "icon": "./ico.png", 
     "toolbar": false,
     "frame": false,
-    "width":768,
+    "width":800,
     "height":520,
-    "resizable": false  
+    "resizable": true  
   }
 }
