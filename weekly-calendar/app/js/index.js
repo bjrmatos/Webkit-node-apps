@@ -87,11 +87,11 @@
                 dayNow = document.querySelector('[data-now="' + h + '-' + n + '"]');
             if (now) {
                 if (now.classList.contains('isNow')) {
-                    dayNow.firstChild.classList.remove('isNow');
+                    dayNow.childNodes[1].classList.remove('isNow');
                     now.classList.remove('isNow');
                 } else {
                     now.classList.add('isNow');
-                    dayNow.firstChild.classList.add('isNow');
+                    dayNow.childNodes[1].classList.add('isNow');
                 }
             }
         }
