@@ -18,10 +18,6 @@
     color: #e74c3c;
     background: #ffffff;
 }
-.box-sizing {
-    box-sizing: border-box;
-}
-
 html,body{
     position:relative;
     height: 100%;
