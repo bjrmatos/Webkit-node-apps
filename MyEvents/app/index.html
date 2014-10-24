@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weekly Calendar</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+
+<body>
+    <div class="window">
+        <div class="window-drag"></div>
+        <div class="window-buttons">
+            <a href="#" id="minimize">minimize</a>
+            <a href="#" id="maximize">Maximize</a>
+            <a href="#" id="close">Close</a>
+        </div>
+        <div class="window-body">
+
+            <div class="widget">
+                <div id="page">
+                    <!-- page -->
+                    <div class="preloader">
+                        <!-- preloader -->
+                        <div class="preloader_inner">
+                            <h3>${preloader_title}</h3>
+                            <p>${preloader_description}</p>
+                        </div>
+                    </div>
+
+                    <div class="wrapper">
+                        <!-- content -->
+                        <div class="wrapper_inner">
+
+                            <nav class="menu">
+                                <button class="btn" type="button" id="modal_open">${modal_title}</button>
+                            </nav>
+
+                            <!-- database section -->
+                            <section id="dbSection">
+                                <h3>${dbSection_title}</h3>
+                                <p>${dbSection_description}</p>
+                                <ul id="dbEvents"></ul>
+                                <pre id="dbJson"></pre>
+                            </section>
+
+                        </div>
+                    </div>
+
+
+
+                    <!-- modal -->
+                    <section class="modal-overlay">
+                        <div class="modal-content">
+                            <button class="btn-close" id="modal_close">&times;</button>
+
+                            <div class="modal-header">
+                                <h3 id="modal-title">${modal_title}</h3>
+                            </div>
+
+                            <div class="modal-body">
+                                <form action="#" method="post" id="dbForm">
+                                    <label>${modal_form_date}</label>
+                                    <input type="date" name="dbDate" id="dbDate" list="days">
+                                    <datalist id="days">
+                                        <option label="Independence Day">2013-07-04</option>
+                                        <option label="Labor Day">2013-09-02</option>
+                                        <option label="Columbus Day">2013-10-14</option>
+                                    </datalist>
+
+
+                                    <label>${modal_form_hour}</label>
+                                    <input type="time" name="dbHour" id="dbHour" list="times">
+                                    <datalist id="times">
+                                        <option label="Morning">08:00</option>
+                                        <option label="Mid-morning">11:00</option>
+                                        <option label="Noon">12:00</option>
+                                        <option label="In the afternoon">16:00</option>
+                                        <option label="In the night">21:00</option>
+                                    </datalist>
+
+                                    <label>${modal_form_title}</label>
+                                    <input type="text" name="dbTitle" id="dbTitle" list="event">
+                                    <datalist id="event">
+                                        <option value="Learn Node.js"></option>
+                                        <option value="Web Design"></option>
+                                        <option value="Testing Javascript"></option>
+                                        <option label="Good for you" value="Exercise"></option>
+                                        <option label="Always good" value="Relaxation"></option>
+                                    </datalist>
+
+                                    <label>${modal_form_description}</label>
+                                    <textarea name="dbDescription" id="dbDescription" rows="5"></textarea>
+                            </div>
+
+                            <div class="modal-footer">
+                                <input type="submit" id="dbAdd" value="${modal_form_submit}">
+                                <input type="submit" id="dbDel" value="${modal_form_delete}">
+                            </div>
+
+                            </form>
+                        </div>
+                    </section>
+                    <!-- modal -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

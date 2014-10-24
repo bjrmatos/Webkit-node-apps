@@ -1,0 +1,561 @@
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: #e74c3c;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #f2f2f2;
+}
+::-webkit-selection {
+    color: #e74c3c;
+    background: #ffffff;
+}
+::-moz-selection {
+    color: #e74c3c;
+    background: #ffffff;
+}
+::selection {
+    color: #e74c3c;
+    background: #ffffff;
+}
+.box-sizing {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: #e74c3c;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    text-rendering: auto;
+}
+h3, p {
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+h3 {
+    font-weight: 700;
+}
+.window {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #ffffff;
+    border-width: 2px;
+    border-color: #FFFFFF;
+    border-style: solid;
+    display: block;
+    height: 100%;
+}
+.window .window-drag {
+    height: 3em;
+    width: 51em;
+    -webkit-app-region: drag;
+}
+.window .window-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 36px;
+    z-index: 99999;
+    -webkit-app-region: no-drag;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.window .window-buttons #minimize, .window .window-buttons #maximize, .window .window-buttons #close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 1em;
+    height: 1em;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 100%;
+}
+.window .window-buttons #minimize {
+    right: 4em;
+    background: #16A085;
+    color: #16A085;
+}
+.window .window-buttons #maximize {
+    right: 2.5em;
+    background: #D35400;
+    color: #D35400;
+}
+.window .window-buttons #close {
+    right: 1em;
+    background: #C0392B;
+    color: #C0392B;
+}
+.window .widget {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 480px) {
+    .window .window-body {
+        width: 100%;
+    }
+}
+/* APP */
+
+a {
+    color: #217dbb;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+a:hover, a:focus {
+    color: #196090;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    font-family: "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+    color: #666666;
+}
+h1 {
+    font-size: 3em;
+    line-height: 1;
+    padding-top: 0.53em;
+    margin-bottom: 0.5em;
+}
+h2 {
+    font-size: 2em;
+    padding-top: 0.25em;
+    margin-bottom: 0.5em;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1;
+    padding-top: 0.35em;
+    margin-bottom: 0.65em;
+}
+p {
+    margin: 0 0 1.5em 0;
+}
+/*  PRELOADER
+--------------------*/
+
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+    filter: alpha(opacity=0);
+    transition: all 0.5s ease;
+}
+.preloader {
+    position: fixed;
+    top: 45px;
+    left: 0;
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+}
+.preloader .preloader_inner {
+    display: block;
+    width: 80%;
+    height: 100px;
+    margin: 40px auto;
+    padding: 5px;
+    text-align: center;
+}
+.preloader .preloader_inner h3 {
+    color: #666666;
+}
+.preloader .preloader_inner p {
+    color: #808080;
+    -webkit-animation: preloader 1s infinite ease;
+    -ms-animation: preloader 1s infinite ease;
+    animation: preloader 1s infinite ease;
+}
+/*  BASIC ANIMATION
+--------------------------*/
+
+@-webkit-keyframes preloader {
+    50% {
+        color: white;
+    }
+}
+@keyframes preloader {
+    50% {
+        color: white;
+    }
+}
+/*  PAGE OR PEN OR SOMETHING
+-------------------------------*/
+
+body {
+    background: #ffffff;
+    color: #333333;
+}
+#page {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#page .wrapper {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#page .wrapper .wrapper_inner {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5em;
+    width: 100%;
+    height: 100%;
+}
+.menu {
+    position: fixed;
+    top: 45px;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+.menu #modal_open {
+    display: block;
+    width: 100%;
+    padding: 0.5em 1em;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #217dbb;
+    background: #3498db;
+    color: #ffffff;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+/* Modal */
+
+.modal-overlay {
+    background: #ffffff;
+    height: 100%;
+    left: 0;
+    display: block;
+    overflow: auto;
+    padding: 0;
+    position: fixed;
+    top: 45px;
+    width: 100%;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.modal-overlay #modal_close {
+    position: fixed;
+    top: 45px;
+    right: 0;
+    padding: 0.2em;
+    background: #ffffff;
+    border: none;
+    font-size: 3em;
+    color: #3498db;
+    outline: none;
+    cursor: pointer;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    text-rendering: auto;
+}
+.modal-overlay #modal_close:hover {
+    color: #f55;
+}
+.modal-overlay .modal-content {
+    background: #ffffff;
+    margin: 0 auto;
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+    padding: 1em;
+    border-radius: 4px;
+}
+@media only screen and (min-width: 240px) {
+    .modal-overlay .modal-content {
+        width: 100%;
+        -webkit-transition: width 0.5s ease;
+        -moz-transition: width 0.5s ease;
+        transition: width 0.5s ease;
+    }
+}
+@media only screen and (min-width: 320px) {
+    .modal-overlay .modal-content {
+        width: 100%;
+        -webkit-transition: width 0.5s ease;
+        -moz-transition: width 0.5s ease;
+        transition: width 0.5s ease;
+    }
+}
+@media only screen and (min-width: 480px) {
+    .modal-overlay .modal-content {
+        width: 100%;
+        -webkit-transition: width 0.5s ease;
+        -moz-transition: width 0.5s ease;
+        transition: width 0.5s ease;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .modal-overlay .modal-content {
+        width: 60%;
+        -webkit-transition: width 0.5s ease;
+        -moz-transition: width 0.5s ease;
+        transition: width 0.5s ease;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .modal-overlay .modal-content {
+        width: 50%;
+        -webkit-transition: width 0.5s ease;
+        -moz-transition: width 0.5s ease;
+        transition: width 0.5s ease;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .modal-overlay .modal-content {
+        width: 50%;
+        -webkit-transition: width 0.5s ease;
+        -moz-transition: width 0.5s ease;
+        transition: width 0.5s ease;
+    }
+}
+.modal-overlay .modal-content #modal-title {
+    font-size: 1.5em;
+    text-align: center;
+}
+.modal-overlay .modal-content .modal-header {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0.5em 1em;
+}
+.modal-overlay .modal-content .modal-body {
+    padding: 0.5em;
+}
+.modal-overlay .modal-content .modal-body #dbForm label {
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+.modal-overlay .modal-content .modal-body #dbForm input, .modal-overlay .modal-content .modal-body #dbForm textarea {
+    display: block;
+    width: 100%;
+    margin: 0.5em auto;
+    padding: 0.5em 1em;
+    background: #e6e6e6;
+    border: 1px solid #b3b3b3;
+    color: #333333;
+}
+.modal-overlay .modal-content .modal-footer {
+    display: block;
+    padding: 0.5em;
+    border-top: 1px solid #e6e6e6;
+}
+.modal-overlay .modal-content .modal-footer input[type="submit"] {
+    border: 1px solid #217dbb;
+    background: #3498db;
+    padding: 0.5em 1em;
+    color: #ffffff;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.modal-overlay .modal-content .modal-footer input[type="submit"]:hover {
+    border: 1px solid #217dbb;
+    background: #217dbb;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.show {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#dbSection {
+    display: block;
+    margin: 2% auto;
+    padding: 0;
+    padding-top: 1%;
+    padding-left: 1%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+@media only screen and (min-width: 240px) {
+    #dbSection {
+        width: 90%;
+        -webkit-transition: width 0.5s ease;
+        -moz-transition: width 0.5s ease;
+        transition: width 0.5s ease;
+    }
+}
+@media only screen and (min-width: 320px) {
+    #dbSection {
+        width: 90%;
+        -webkit-transition: width 0.5s ease;
+        -moz-transition: width 0.5s ease;
+        transition: width 0.5s ease;
+    }
+}
+@media only screen and (min-width: 480px) {
+    #dbSection {
+        width: 95%;
+        -webkit-transition: width 0.5s ease;
+        -moz-transition: width 0.5s ease;
+        transition: width 0.5s ease;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #dbSection {
+        width: 100%;
+        -webkit-transition: width 0.5s ease;
+        -moz-transition: width 0.5s ease;
+        transition: width 0.5s ease;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    #dbSection {
+        width: 100%;
+        -webkit-transition: width 0.5s ease;
+        -moz-transition: width 0.5s ease;
+        transition: width 0.5s ease;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    #dbSection {
+        width: 90%;
+        -webkit-transition: width 0.5s ease;
+        -moz-transition: width 0.5s ease;
+        transition: width 0.5s ease;
+    }
+}
+#dbSection h3 {
+    color: #3498db;
+}
+#dbSection #dbEvents {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#dbSection #dbEvents li {
+    display: inline-block;
+    float: left;
+    padding: 0;
+    margin: 0;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    padding: 0.5em;
+}
+@media only screen and (min-width: 240px) {
+    #dbSection #dbEvents li {
+        width: 100%;
+        -webkit-transition: width 0.5s ease;
+        -moz-transition: width 0.5s ease;
+        transition: width 0.5s ease;
+    }
+}
+@media only screen and (min-width: 320px) {
+    #dbSection #dbEvents li {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 480px) {
+    #dbSection #dbEvents li {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #dbSection #dbEvents li {
+        width: 49%;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    #dbSection #dbEvents li {
+        width: 32%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    #dbSection #dbEvents li {
+        width: 32%;
+    }
+}
+#dbSection #dbEvents li .eventDel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.2em;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 2em;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#dbSection #dbEvents li .eventDel:hover {
+    color: #f55;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#dbSection #dbEvents li h3 {
+    margin: 0;
+    padding: 0.2em 0;
+    margin-bottom: 0.2em;
+}
+#dbSection #dbEvents li .eventDate {
+    display: block;
+    background: #FFFFFF;
+    padding: 0.5em;
+    color: #7E7E7E;
+    overflow: hidden;
+}
+#dbSection #dbEvents li .eventDate .in-left {
+    float: left;
+}
+#dbSection #dbEvents li .eventDate .in-right {
+    float: right;
+}
+#dbSection #dbEvents li .eventDesc {
+    padding: 0.5em 0.2em;
+    border-bottom: 1px solid #F0F0F0;
+    color: #333333;
+}
+#dbJson {
+    display: none;
+    width: 100%;
+    padding: 0.2em;
+    background: #e6e6e6;
+    color: #333333;
+    word-break: break-word;
+}
