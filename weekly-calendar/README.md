@@ -14,5 +14,3 @@ Weekly Calendar  with localStorage simple.
 
 [Weekly Calendar](http://codepen.io/nakome/pen/svlih)
 
-**Prototype Screen:**
-![49157.svlih.small.c4e33009 D7c7 48b8 91ba C83e091aa453](http://s3-us-west-2.amazonaws.com/i.cdpn.io/49157.svlih.small.c4e33009-d7c7-48b8-91ba-c83e091aa453.png)
