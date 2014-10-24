@@ -2,9 +2,9 @@
 (function() {
     // Root folder
     var root = process.cwd(),
-        nw = require("nw.gui");
-    var win = nw.Window.get();
-    win .isMaximized = !1;
+        nw = require("nw.gui"); // window functions
+    var win = nw.Window.get(); // short
+    win.isMaximized = !1; // set false 
 
 
     var weeklyCalendar = (function() {
