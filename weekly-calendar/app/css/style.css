@@ -14,16 +14,11 @@
     color: #e74c3c;
     background: #ffffff;
 }
-::-moz-selection {
-    color: #e74c3c;
-    background: #ffffff;
-}
 ::selection {
     color: #e74c3c;
     background: #ffffff;
 }
 .box-sizing {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -37,6 +32,7 @@ body {
     background: #e74c3c;
     color: #ffffff;
     font-size: 13px;
+    /* Nice and fast font */
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     text-rendering: auto;
@@ -50,9 +46,6 @@ h3 {
     font-weight: 700;
 }
 .window {
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     position: relative;
     width: 100%;
@@ -77,10 +70,9 @@ h3 {
     width: 100px;
     height: 36px;
     z-index: 99999;
+    /* no drag */
     -webkit-app-region: no-drag;
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 .window .window-buttons #minimize, .window .window-buttons #maximize, .window .window-buttons #close {
@@ -122,9 +114,6 @@ h3 {
 }
 table {
     -webkit-app-region: no-drag;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 20px auto;
     background: #e74c3c;
@@ -152,8 +141,6 @@ table tr td:first-child {
     color: #e74c3c;
     border-bottom: 1px solid #ffffff;
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 table tr td:last-child {
@@ -182,8 +169,6 @@ table tr:first-child {
     background: #ffffff;
     color: #e74c3c;
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 .isNow {
