@@ -1,5 +1,6 @@
 "use strict";
 (function() {
+    // Root folder
     var root = process.cwd(),
         nw = require("nw.gui");
     var win = nw.Window.get();
@@ -10,11 +11,12 @@
         'use strict';
         return {
             run: function() {
-                windows();
-                init();
+                windows(); // init windows
+                init(); // init other functions
             }
         };
-
+        
+        // windows close minimize and maximize
         function windows() {
 
             var win_minimize = qS('#minimize'),
@@ -38,20 +40,23 @@
                 }
             });
 
-
+            // minimze
             win_minimize.addEventListener('click', function(e) {
                 e.preventDefault();
                 win.minimize();
             });
+            // maximize
             win_maximize.addEventListener('click', function(e) {
                 e.preventDefault();
                 win.isMaximized ? win.unmaximize() : win.maximize();
             });
+            // close
             win_close.addEventListener('click', function(e) {
                 e.preventDefault();
                 win.close();
             });
-
+            
+            // toggle
             win.on("maximize", function() {
                 win.isMaximized = !0
             });
@@ -61,23 +66,25 @@
         }
 
         function init() {
-            clock();
+            clock(); // init clock
+            // all textareas = 56
             for (var i = 1; i < 56; i++) {
                 var key = '#id_' + i;
                 set(key);
             }
             assign();
             var second = 1000;
+            // update
             setInterval(function() {
-                clock();
+                clock(); // for test only
                 assign();
             }, second * 10);
         }
-
+        // short queryselector
         function qS(element) {
             return document.querySelector(element);
         }
-
+        // asign hour and day backgrounds
         function assign() {
             var days = ['sun', 'mon', 'tu', 'we', 'thu', 'fri', 'sat'],
                 time = new Date(),
@@ -95,7 +102,7 @@
                 }
             }
         }
-
+        // localstorage simple no Json more fast
         function set(key) {
             var el = document.querySelector(key);
             el.innerText = localStorage.getItem(el.id);
@@ -103,7 +110,7 @@
                 localStorage.setItem(this.id, this.value);
             }, false);
         }
-
+        // clock 3:00 PM
         function clock() {
             var t = new Date(),
                 h = t.getHours(),
@@ -125,5 +132,6 @@
             return i;
         }
     })();
+    // onload
     window.addEventListener('load', weeklyCalendar.run);
 })();
